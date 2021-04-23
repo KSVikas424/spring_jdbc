@@ -10,6 +10,7 @@ public interface StudentDao {
 	void delRecordById(int id);
 	int delRecordByNameORSem(String studentName, int sem);
 	public List<Student> getAllStudents();
+	Student findStudentById(int id);
 
 
 }
