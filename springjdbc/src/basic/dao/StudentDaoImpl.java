@@ -44,5 +44,16 @@ public class StudentDaoImpl  implements StudentDao{
 	}
 
 
+
+
+	@Override
+	public int delRecordByNameSem(String studentName, int sem) {
+		String sql = "DELETE FROM STUDENT WHERE NAME = ? OR SEMESTER =? ";
+		Object[] objects = {studentName, sem};
+		int noRecordsDeleted = jdbcTemplate.update(sql, objects);
+		return noRecordsDeleted;
+	}
+
+
 	
 }

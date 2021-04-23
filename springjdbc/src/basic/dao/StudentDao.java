@@ -7,4 +7,5 @@ public interface StudentDao {
 
 	public void delRecordById(int id);
 
+	int delRecordByNameSem(String studentName, int sem);
 }
